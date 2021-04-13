@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                {% include'produit/_rechercheform.html.twig' with{form: form} %}
+            </div>
+            <div class="col-md-9">
+                <div class="grille">
+                    {% for produit in produits %}
+                        {% include'produit/_produitcard.html.twig' with{produit: produit} %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

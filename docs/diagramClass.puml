@@ -1,0 +1,15 @@
+@startuml
+class Article {
+ -id : integer
+ -titre : string
+ -prix : integer
+ -description : text
+ -promo : boolean
+ -image : string
+}
+class Catégorie {
+ -id : integer
+ -titre : string
+}
+Article "*" -- "1..*" Catégorie : appartient >
+@enduml

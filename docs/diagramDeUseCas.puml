@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor "User" as fc
+rectangle Site {
+  usecase "Consulter le catalogue" as UC1
+  usecase "Rechercher dans le catalogue" as UC2
+}
+fc --> UC1
+fc --> UC2
+
+@enduml
